@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceFlow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">Finance<span>Flow</span></div>
+            <nav>
+                <button class="nav-item active" onclick="updateMode('emi', this)">EMI Calc</button>
+                <button class="nav-item" onclick="updateMode('sip', this)">SIP Calc</button>
+                <button class="nav-item" onclick="updateMode('fd', this)">FD Calc</button>
+                <button class="nav-item" onclick="updateMode('lumpsum', this)">Lumpsum</button>
+            </nav>
+        </aside>
+
+        <main class="viewport">
+            <div class="slide-wrapper" id="slideWrapper">
+                
+                <section class="screen">
+                    <h1 id="calc-name">EMI Calculator</h1>
+                    <p id="calc-desc" style="color: var(--text-muted)">Calculate your monthly loan repayments.</p>
+
+                    <div class="input-form">
+                        <div class="input-box">
+                            <label id="label-amount">Principal Amount (₹)</label>
+                            <input type="number" id="val-amount" placeholder="e.g. 500000">
+                        </div>
+                        <div class="input-box">
+                            <label>Annual Interest Rate (%)</label>
+                            <input type="number" id="val-rate" placeholder="e.g. 8.5">
+                        </div>
+                        <div class="input-box">
+                            <label>Tenure (Years)</label>
+                            <input type="number" id="val-years" placeholder="e.g. 5">
+                        </div>
+                        <button class="btn-calc" onclick="runCalculation()">Calculate Returns →</button>
+                    </div>
+                </section>
+
+                <section class="screen">
+                    <button class="btn-back" onclick="slideBack()">← Edit Parameters</button>
+                    <h1 style="margin-bottom: 5px;">Estimation</h1>
+                    <p style="color: var(--text-muted)">Based on the details provided:</p>
+                    
+                    <div class="result-cards">
+                        <div class="card">
+                            <small>Invested / Principal Amount</small>
+                            <h3 id="res-invested">₹0</h3>
+                        </div>
+                        <div class="card">
+                            <small>Estimated Profit / Interest</small>
+                            <h3 id="res-profit" class="green-text">₹0</h3>
+                        </div>
+                        <div class="card total">
+                            <small>Total Value</small>
+                            <h2 id="res-total">₹0</h2>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
