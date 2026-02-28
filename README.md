@@ -46,3 +46,13 @@ Results are automatically formatted in the **Indian Numbering System (₹)**
 - Clean and modular JavaScript logic
 - Fully responsive layout
 - Production-ready UI design
+
+---
+
+## 📸 Preview
+
+<img width="959" height="437" alt="image" src="https://github.com/user-attachments/assets/ab4b2b96-5e32-45f1-a66d-b85958542cfa" />
+
+<img width="959" height="436" alt="image" src="https://github.com/user-attachments/assets/4aca9450-1151-4c31-a0b6-6b415e5c5262" />
+
+
